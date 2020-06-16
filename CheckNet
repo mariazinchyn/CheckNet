@@ -1,0 +1,21 @@
+package patterns2020.checkNet;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class CheckNet {
+    public static void main(String[] args) {
+        try {
+            URL url = new URL("https://www.google.com/");
+            URLConnection connection = url.openConnection();
+            connection.connect();
+            
+            //if is connection
+            
+            System.out.println("internet is working");
+
+        }
+        catch (Exception exec){
+            System.out.println("no internet");
+        }
+    }
+}
